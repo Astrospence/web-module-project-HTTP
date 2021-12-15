@@ -23,6 +23,9 @@ const EditMovieForm = (props) => {
             .then(res=>{
                 setMovie(res.data);
             })
+			.catch(err => {
+				console.error(err);
+			})
 	}, [id]);
 	
 	const handleChange = (e) => {
